@@ -83,6 +83,29 @@ jobs:
               git show origin/main:"$path" > "$path"
             done
 
+          # Deletions: remove docs/*.md and docs/public/assets files that no longer exist in public
+          # (Never touch other files like docs/.vitepress or application code)
+          for f in $(git ls-tree -r --name-only HEAD | grep -E '^docs/.*\.md$' || true); do
+            if ! git cat-file -e origin/main:"$f" 2>/dev/null; then
+              git rm -f "$f" || true
+            fi
+          done
+
+          for f in $(git ls-tree -r --name-only HEAD | grep -E '^docs/public/assets/' || true); do
+            if ! git cat-file -e origin/main:"$f" 2>/dev/null; then
+              git rm -f "$f" || true
+            fi
+          done
+
+          # Optional: also reflect deletion of README.md / CONTRIBUTING.md if removed in public
+          for f in README.md CONTRIBUTING.md; do
+            if git ls-files --error-unmatch "$f" >/dev/null 2>&1; then
+              if ! git cat-file -e origin/main:"$f" 2>/dev/null; then
+                git rm -f "$f" || true
+              fi
+            fi
+          done
+
           # Stage only those paths
           git add README.md 2>/dev/null || true
           git add CONTRIBUTING.md 2>/dev/null || true
