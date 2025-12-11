@@ -222,12 +222,9 @@ onMounted(() => {
       title: '| Embeds |',
       subFilters: ['All', 'Movies', 'TV Shows', 'Anime'],
       items: [
-        { name: 'Hotflix', logo: 'https://hotflix.su/logo.png', url: 'https://hotflix.su', subFilter: 'Movies' },
-        { name: 'Vidbox', logo: 'https://vidbox.cc/logo.png', url: 'https://vidbox.cc', subFilter: ['Movies', 'TV Shows'] },
-        { name: 'CineHD', logo: 'https://cinehd.cc/logo.png', url: 'https://cinehd.cc', subFilter: 'TV Shows' },
-        { name: 'Autoembed', logo: 'https://autoembed.cc/images/logo.png?v=0.6', url: 'https://watch.autoembed.cc', subFilter: 'Movies' },
-        { name: 'Primeshows', logo: '/assets/primeshows/logo.png', url: 'https://primeshows.live', subFilter: 'Anime' },
-        { name: 'Smashystream', logo: 'https://tbcpl.lol/logo/movies_shows/smashystream.png', url: 'https://smashystream.xyz/', subFilter: 'TV Shows' }
+        { name: 'VidPLus', logo: '/assets/vidplusto.png', url: 'https://vidplus.to', subFilter: ['Movies', 'TV Shows', 'Anime' ] },
+        { name: 'Autoembed', logo: 'https://autoembed.cc/images/logo.png?v=0.6', url: 'https://watch.autoembed.cc', subFilter: ['Movies', 'TV Shows', 'Anime' ] },
+        { name: 'Primeshows', logo: '/assets/primeshows/logo.png', url: 'https://primeshows.live', subFilter: ['Movies', 'TV Shows'] },
       ]
     },
     'live-sports': { title: '| Live Sports |', items: [] },
