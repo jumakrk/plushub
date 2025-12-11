@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- Rainbow circle gradient -->
+  <defs>
+    <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="16.66%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="33.33%" style="stop-color:#eab308;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#22c55e;stop-opacity:1" />
+      <stop offset="66.66%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="83.33%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rainbow circle -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#rainbowGradient)" stroke-width="8" opacity="0.9"/>
+  
+  <!-- Large plus sign -->
+  <g transform="translate(200, 200)">
+    <!-- Horizontal line -->
+    <rect x="-80" y="-12" width="160" height="24" rx="12" fill="white" opacity="0.95"/>
+    <!-- Vertical line -->
+    <rect x="-12" y="-80" width="24" height="160" rx="12" fill="white" opacity="0.95"/>
+  </g>
+</svg>
